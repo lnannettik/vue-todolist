@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Awesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
+<!-- CSS -->
     <link rel="stylesheet" href="style.css">
+<!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Vue ToDo List</title>
 </head>
 
 <body class="body">
     
-    <div id="app"></div>
+    <div id="app" class="container">
+        <header class="app-header">
+            <img src="./img/logo-white.png" alt="">
+        </header>
+ -->
+        <!-- <section class="new-todo">
+            <input type="text" placeholder="nuovo todo" v-model.trim="newTodo" @keyup.enter="addTodo" ref="todoInput">
+            <button class="button" @click="addTodo">Aggiungi</button>
+        </section>
+
+        <main class="todos-section">
+
+            <h2 v-if="todos.length == 0">la lista è vuota</h2>
+            <ul class="todos-list" v-else="todos.length > 0">
+                <!-- <li class="todo">
+                    <span class="text">todo text here</span>
+                    <i class="fas fa-trash delete"></i>
+                </li>
+                <li class="todo completed">
+                    <span class="text">item text here</span>
+                    <i class="fas fa-trash delete"></i>
+                </li>
+                <li class="todo">
+                    <span class="text">todo text here</span>
+                    <i class="fas fa-trash delete"></i>
+                </li>
+                <li class="todo">
+                    <span class="text">todo text here</span>
+                    <i class="fas fa-trash delete"></i>
+                </li> -->
+                <!-- <li class="todo" v-for="(todo, index) in todos" :class="{completed: todo.completed}" @click="updateStatus(index)" v-show="(filterActive === false) || (filterActive === true && todo.completed === false)">
+                    <span class="text">{{todo.text}}</span>
+                    <i class="fas fa-trash delete" @click="removeTodo(index)"></i>
+                </li>
+            </ul>
+        </main>
+    </div>
+
 
 
     <script src="main.js"></script>

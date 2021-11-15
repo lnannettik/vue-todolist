@@ -26,10 +26,72 @@ console.log(`JS OK`);
 
 
 
-const app = new Vue ({
+// const app = new Vue ({
+//     el: '#app',
+//     data: {},
+//     methods: {}
+// });
+
+
+const app = new Vue({
     el: '#app',
-    data: {},
-    methods: {}
+    data: {
+        todos: [
+            {
+                text: 'terminare Web App',
+                completed: false,
+            },
+            {
+                text: 'fare la spesa',
+                completed: false,
+            },
+            {
+                text: 'fare il bucato',
+                completed: true,
+            },
+        ],
+        newTodo: '',
+        filterActive: false,
+    },
+    computed: {
+        // return number of completed todos
+        completedTodos() {
+            const completed = this.todos.filter( todo => todo.completed);
+            return completed.length;
+        },
+    },
+    methods: {
+        addTodo() {
+            if (this.newTodo !== '') {
+
+                // inserisce il todo nell'array di todos
+                this.todos.unshift({
+                    text: this.newTodo,
+                    completed: false,});
+                
+                //pulizia barra inserimento testo
+                this.newTodo = '';
+
+                // targettizare un elemento che abbia attributo ref
+                this.$refs.todoInput.focus();
+            }
+        },
+
+        ////////////////////
+
+        removeTodo(index) {
+            this.todos.splice(index, 1);
+            // salvare l'elemento eliminato per poterlo salvare e poterlo elaborare
+            const deleted = this.todos.splice(index, 1);
+            console.log(deleted);
+        },
+
+        /////////////////////
+
+        updateStatus(index) {
+            console.log(index);
+            this.todos[index].completed = !this.todos[index].completed;
+        },
+
+    }
 });
-
-
