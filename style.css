@@ -3,249 +3,90 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    background: #0f4c5c;
-    font-family: sans-serif;
-    border-top: 5px solid #0f4c5c;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
 
 
-/* title */
-h1 {
-    color: #aa8e8d;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 900;
-}
-
+/* UTILITIES */
 .container {
     max-width: 700px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* header {
-    margin-block: 20px;
+.button {
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: #00e165;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .3s;
 }
 
-header img {
-    max-width: 180px;
-    filter: invert(1);
-    margin: 0 auto;
-} */
+.button:hover,
+.button:focus {
+    background-color: #ccc;
+}
 
+/* HEADER */
+.app-header {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.app-header img {
+    max-width: 300px;
+}
+
+/* NEW TODO */
 .new-todo {
     display: flex;
-    padding-block: 12px;
-}
-
-.new-todo:hover,
-.new-todo:focus {
-    border-color: black;
 }
 
 .new-todo input {
     flex-grow: 1;
-    padding-bottom: 3px;
     height: 35px;
+    margin-right: 20px;
     border: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ccc;
     outline: none;
 }
 
-.new-todo .button {
-    margin-left: 10px;
-    padding: 3px 10px;
-    font-size: 14px;
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
-    outline: none;
-    text-transform: uppercase;
-    background-color: greenyellow;
-}
+.new-todo input:hover,
 .new-todo input:focus {
-    border-color: black;
-    border-width: 3px;
+    border-color: #000;
 }
 
 
-.new-todo .button:hover,
-.new-todo .button:focus {
-    background-color: green;
-    color: white;
-    font-weight: bold;
+/* TODOS section */
+.todos-section {
+    margin: 40px 0;
 }
 
-
-
-
-/*.todos-section {
-    margin: 20px auto;
-}
 
 .todos-list {
     padding: 15px 30px;
-    background-color: #ccc;
-}
-
-.todo-filter {
-    color: green;
-    font-weight: bold;
-    font-size: 16px;
-    display: block;
-    margin: 10px 0;
+    background: #f2f2f2;
+    box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, .2);
 }
 
 .todo {
     display: flex;
-    padding: 5px;
-    border-bottom: 1px solid black;
+    pad: 10px 0;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, .7);
-    border-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    position: relative;
+
 }
 
-li {
-    display: flex;
-    padding: 5px;
-    position: relative;
+.todo:last-child {
+    border: none;
 }
 
 .todo .text {
     flex-grow: 1;
-    padding: 0 20px;
 }
 
-.todo:last-of-type {
-    border: 0;
-}
-
-.todo .text::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 5px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid black;
-}
-
-.todo.completed .text{
-    text-decoration: line-through;
-    text-decoration-color: black;
-    color: grey;
-}
-
-.todo.completed .text::before {
-    background-color: greenyellow;
-}
-
-.todo .delete:hover,
-.todo.completed .delete:hover {
-    color: rgb(218, 56, 56);
-} */
-
-body {
-    background: #4d244e;
-    font-family: sans-serif;
-    border-top: 5px solid #aa8e8d;
-}
-
-/* title */
-h1 {
-    color: #aa8e8d;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 900;
-}
-
-/* tasks */
-.tasks {
-    width: 300px;
-    height: 405px;
-    position: absolute;
-    top: 20%;
-    left: 0px; 
-    right: 0px;
-    margin: 0px auto;
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-label {
-    background: #ae5f75;
-    height: 69px;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #2C3E50;
-    color: #fff;
-    text-transform: capitalize;
-    font-weight: 900;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-indent: 20px;
-    cursor: pointer;
-    transition: all 0.7s ease;
-    position: relative;
-    padding: 5px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-label h2 span {
-    display: block;
-    font-size: 12px;
-    text-transform: capitalize;
-    font-weight: normal;
-    color: #fff;
-}
-
-label:before {
-    content:"";
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    display: block;
-    position: absolute;
-    border-radius: 100%;
-    right: 20px;
-    top: 30%;
-    transition: border 0.7s ease
-}
-
-    #label-1:checked ~ label[for=label-1],
-    #label-2:checked ~ label[for=label-2],
-    #label-3:checked ~ label[for=label-3],
-    #label-4:checked ~ label[for=label-4],
-    #label-5:checked ~ label[for=label-5]{
-    background: #6d335c;
-    border-bottom: 1px solid #34495E;
-    color: #d37b79;
-}
-
-    #label-1:checked ~ label[for=label-1] h2 span,
-    #label-2:checked ~ label[for=label-2] h2 span,
-    #label-3:checked ~ label[for=label-3] h2 span,
-    #label-4:checked ~ label[for=label-4] h2 span,
-    #label-5:checked ~ label[for=label-5] h2 span{
-    color: #f6bd66;
-}
-
-    #label-1:checked ~ label[for=label-1]:before,
-    #label-2:checked ~ label[for=label-2]:before,
-    #label-3:checked ~ label[for=label-3]:before,
-    #label-4:checked ~ label[for=label-4]:before,
-    #label-5:checked ~ label[for=label-5]:before{
-    background: url("https://i.imgur.com/eoPQ05r.png") no-repeat center center;
-}

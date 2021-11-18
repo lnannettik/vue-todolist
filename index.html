@@ -16,97 +16,30 @@
 <body class="body">
     
     <div id="app" class="container">
-
-        <!-- <header class="app-header">
-            <img src="./img/logo-white.png" alt="">
+        <header class="app-header">
+            <img src="https://www.boolean.careers/images/misc/logo.png" alt="Logo Boolean">
         </header>
-        -->
-        <!-- <section class="new-todo">
-            <input type="text" placeholder="nuovo todo" v-model.trim="newTodo" @keyup.enter="addTodo" ref="todoInput">
-            <button class="button" @click="addTodo">Aggiungi</button>
+
+
+        <section class='new-todo'>
+            <input type="text" placeholder="Nuovo todo">
+            <button class='button'>Aggiungi</button>
         </section>
 
         <main class="todos-section">
-
-            <h2 v-if="todos.length == 0">la lista è vuota</h2>
-            <ul class="todos-list" v-else="todos.length > 0"> -->
-                <!-- <li class="todo">
-                    <span class="text">todo text here</span>
-                    <i class="fas fa-trash delete"></i>
+            <ul class="todos-list">
+                <li class="todo">
+                    <span class="text"> jlkhbwrjbvhlwrbvh</span>
+                    <i class="far fa-trash-alt delete"></i>
                 </li>
                 <li class="todo completed">
-                    <span class="text">item text here</span>
-                    <i class="fas fa-trash delete"></i>
-                </li>
-                <li class="todo">
-                    <span class="text">todo text here</span>
-                    <i class="fas fa-trash delete"></i>
-                </li>
-                <li class="todo">
-                    <span class="text">todo text here</span>
-                    <i class="fas fa-trash delete"></i>
-                </li> -->
-                <!-- <li class="todo" v-for="(todo, index) in todos" :class="{completed: todo.completed}" @click="updateStatus(index)" v-show="(filterActive === false) || (filterActive === true && todo.completed === false)">
-                    <span class="text">{{todo.text}}</span>
-                    <i class="fas fa-trash delete" @click="removeTodo(index)"></i>
+                    <span class="text"> jlkhbwrjbvhlwrbvh</span>
+                    <i class="far fa-trash-alt delete"></i>
                 </li>
             </ul>
-        </main> -->
 
-        
+        </main>
 
-        <div class="tasks">
-
-            <!-- title -->
-            <h1>CSS3 To-Do List</h1>
-
-        <section class="new-todo">
-            <input type="text" placeholder="nuovo todo" v-model.trim="newTodo" @keyup.enter="addTodo" ref="todoInput">
-            <button class="button" @click="addTodo">Aggiungi</button>
-        </section>
-
-
-
-            <!-- task 1 -->
-            <input id='label-1' type='checkbox' checked/>
-            <label for='label-1'>
-                <h2>Eat My Breakfast
-                    <span>oatmeal, fruits &amp; morning tea</span>
-                </h2>   
-            </label>
-
-            <!-- task 2 -->
-            <input id='label-2' type='checkbox' checked/>
-            <label for='label-2'>
-                <h2>e-mail processing 
-                    <span>art&amp;&amp;code, personal</span>
-                </h2>   
-            </label>
-
-            <!-- task 3 -->
-            <input id='label-3' type='checkbox'/>
-            <label for='label-3'>
-                <h2>Meditation
-                    <span>out of my mind</span>
-                </h2>   
-            </label>
-
-            <!-- task 4 -->
-            <input id='label-4' type='checkbox'/>
-            <label for='label-4'>
-                <h2>Code, Code, Code
-                    <span>hit f12 &amp; let's get wasted</span>
-                </h2>   
-            </label>
-
-            <!-- task 5 -->
-            <input id='label-5' type='checkbox'/>
-            <label for='label-5'>
-                <h2>Watch Screencast
-                    <span>Ruby on Rails, yeah!</span>
-                </h2>   
-            </label>
-        </div>
 
     </div>
 
